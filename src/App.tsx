@@ -124,8 +124,8 @@ export default function App() {
                     <div>► / Tecla D: Mover derecha</div>
                     <div>▲ / W / Shift: Nitro Turbo 🚀</div>
                     <div>Espacio / J: Disparar cañón 💥</div>
-                    <div>P: Pausar / Reanudar</div>
-                    <div>R (en Game Over): Reiniciar</div>
+                    <div>Tecla G: Taller & Garaje 🛒</div>
+                    <div>P: Pausar / R: Reiniciar</div>
                   </div>
                 </div>
               </div>

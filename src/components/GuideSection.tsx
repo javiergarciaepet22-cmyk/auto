@@ -1,38 +1,48 @@
 import React from 'react';
-import { CheckCircle2, Gamepad2, Layers, Cpu, Compass, Terminal, Zap, Crosshair, RefreshCw } from 'lucide-react';
+import { CheckCircle2, Gamepad2, Layers, Cpu, Compass, Terminal, Zap, Crosshair, RefreshCw, ShoppingBag, Coins, Palette } from 'lucide-react';
 
 export const GuideSection: React.FC = () => {
   return (
     <div id="guide-section" className="space-y-6 text-slate-300">
-      {/* Overview Cards with New Combat Mechanics */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {/* Overview Cards with New Garage and Progression Mechanics */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl">
-          <div className="flex items-center space-x-2 text-cyan-400 font-semibold mb-2 text-sm">
-            <Zap className="w-4 h-4" />
-            <span>Nitro Turbo Propulsor</span>
+          <div className="flex items-center space-x-2 text-amber-400 font-semibold mb-2 text-sm">
+            <Coins className="w-4 h-4" />
+            <span>Monedas y Economía</span>
           </div>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Mantén presionado <strong className="text-slate-200">Flecha Arriba, W o Shift</strong> para activar el turbo. Aumenta la velocidad un 80% y las llamas vectoriales en el Canvas duplican tu puntuación por segundo.
+            Recoge monedas doradas en el asfalto (+$15-$25), esquiva autos de forma segura (+$5) o destrúyelos con tus cañones (+$30).
           </p>
         </div>
 
         <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl">
-          <div className="flex items-center space-x-2 text-amber-400 font-semibold mb-2 text-sm">
-            <Crosshair className="w-4 h-4" />
-            <span>Cañón Frontal & Explosiones</span>
+          <div className="flex items-center space-x-2 text-cyan-400 font-semibold mb-2 text-sm">
+            <ShoppingBag className="w-4 h-4" />
+            <span>Taller & Catálogo de Autos</span>
           </div>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Pulsa <strong className="text-slate-200">Espacio o J</strong> para disparar plasma frontal. Los autos enemigos impactados explotan en chispas geométricas en el Canvas otorgando +75 puntos cada uno.
+            Pulsa <strong className="text-slate-200">[G]</strong> para abrir el garaje. Compra bólidos como el Muscle V8, Cyber Phantom, Hypercar Veloce o Titan Enforcer.
+          </p>
+        </div>
+
+        <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl">
+          <div className="flex items-center space-x-2 text-pink-400 font-semibold mb-2 text-sm">
+            <Palette className="w-4 h-4" />
+            <span>Pinturas y Neón Underglow</span>
+          </div>
+          <p className="text-xs text-slate-400 leading-relaxed">
+            Personaliza el color de carrocería entre 8 tonos y activa luces de neón bajo el chasis (Cyan, Rosa Eléctrico, Lima, Ámbar).
           </p>
         </div>
 
         <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl">
           <div className="flex items-center space-x-2 text-emerald-400 font-semibold mb-2 text-sm">
-            <RefreshCw className="w-4 h-4" />
-            <span>Recarga al Esquivar</span>
+            <Zap className="w-4 h-4" />
+            <span>Mejoras de Rendimiento</span>
           </div>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Cada auto NPC que rebasa la parte inferior de la pantalla sin chocar contigo otorga <strong className="text-emerald-300">+25% de Nitro</strong> y <strong className="text-amber-300">+2 balas de cañón</strong>.
+            Invierte tu dinero en subir de nivel el motor (más velocidad base), capacidad del tanque de nitro y cartuchos de munición.
           </p>
         </div>
       </div>
@@ -41,16 +51,16 @@ export const GuideSection: React.FC = () => {
       <div className="p-5 bg-slate-900/90 border border-slate-800 rounded-xl space-y-3">
         <h3 className="text-sm font-bold text-slate-100 uppercase tracking-wider flex items-center space-x-2">
           <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-          <span>Verificación de Nuevas Mecánicas Solicitadas</span>
+          <span>Mecánicas y Mejoras Implementadas</span>
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
           <div className="flex items-start space-x-2.5 p-2.5 bg-slate-950/60 rounded-lg border border-slate-800/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="text-slate-200">1. Sistema de Nitro Turbo:</strong>
+              <strong className="text-slate-200">1. Gráficos Enriquecidos:</strong>
               <p className="text-slate-400 mt-0.5">
-                Acelerador con medidor porcentual en el HUD, escape con animación de llamaradas y física reactiva de velocidad.
+                Farolas con conos de luz en el asfalto, arcenes alternados, patrullas con sirena destellante, camiones pesados y efectos de neón en el suelo.
               </p>
             </div>
           </div>
@@ -58,9 +68,9 @@ export const GuideSection: React.FC = () => {
           <div className="flex items-start space-x-2.5 p-2.5 bg-slate-950/60 rounded-lg border border-slate-800/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="text-slate-200">2. Cañón para Explotar Tráfico:</strong>
+              <strong className="text-slate-200">2. Variedad de Autos Comprables:</strong>
               <p className="text-slate-400 mt-0.5">
-                Proyectiles de plasma dual que detectan colisión con los NPCs y generan una animación de explosión radial en el Canvas de Tkinter.
+                5 modelos con carrocerías vectoriales únicas: Sport, Muscle con toma de aire, Cyber con alerones angulares, Hypercar Le Mans y Blindado Titan.
               </p>
             </div>
           </div>
@@ -68,9 +78,9 @@ export const GuideSection: React.FC = () => {
           <div className="flex items-start space-x-2.5 p-2.5 bg-slate-950/60 rounded-lg border border-slate-800/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="text-slate-200">3. Recarga Automática al Esquivar:</strong>
+              <strong className="text-slate-200">3. Personalización Completa:</strong>
               <p className="text-slate-400 mt-0.5">
-                Al rebasar a un NPC de forma segura (llegar a <code className="text-emerald-300">y &gt; canvas_height</code>), el juego incrementa automáticamente el nitro y suma munición.
+                Selector de color primario, luces de suelo de neón underglow y mejoras de velocidad de motor, nitro y cañones.
               </p>
             </div>
           </div>
@@ -78,9 +88,9 @@ export const GuideSection: React.FC = () => {
           <div className="flex items-start space-x-2.5 p-2.5 bg-slate-950/60 rounded-lg border border-slate-800/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="text-slate-200">4. 100% Librería Estándar Tkinter:</strong>
+              <strong className="text-slate-200">4. 100% Python Estándar Tkinter:</strong>
               <p className="text-slate-400 mt-0.5">
-                Cero dependencias externas. Se ejecuta con cualquier instalación estándar de Python 3 sin requerir Pygame.
+                Tanto el simulador web como el archivo <code className="text-emerald-300">juego_carreras.py</code> cuentan con el garaje completo sin instalar módulos externos.
               </p>
             </div>
           </div>
@@ -96,33 +106,26 @@ export const GuideSection: React.FC = () => {
 
         <div className="space-y-3 text-xs leading-relaxed">
           <div className="p-3 bg-slate-950 rounded-lg border border-slate-800 space-y-1.5">
-            <span className="font-semibold text-amber-300">Paso 1: Guardar el archivo</span>
+            <span className="font-semibold text-amber-300">Paso 1: Guardar o Descargar el archivo</span>
             <p className="text-slate-400">
-              Guarda el código provisto en un archivo con el nombre <code className="text-slate-200 font-mono">juego_carreras.py</code> (puedes usar el botón "Descargar .py").
+              Descarga el archivo haciendo clic en el botón superior <strong className="text-white">"Descargar .py"</strong> o cópialo desde la pestaña <strong className="text-white">"Código Python"</strong> y guárdalo como <code className="text-cyan-300">juego_carreras.py</code>.
             </p>
           </div>
 
           <div className="p-3 bg-slate-950 rounded-lg border border-slate-800 space-y-1.5">
-            <span className="font-semibold text-amber-300">Paso 2: Abrir una terminal o línea de comandos</span>
+            <span className="font-semibold text-amber-300">Paso 2: Abrir terminal o consola</span>
             <p className="text-slate-400">
-              Navega con el comando <code className="text-slate-200 font-mono">cd</code> a la carpeta donde guardaste el archivo.
+              Abre PowerShell, Símbolo del sistema (CMD) o la Terminal de macOS/Linux en la carpeta donde guardaste el archivo.
             </p>
           </div>
 
           <div className="p-3 bg-slate-950 rounded-lg border border-slate-800 space-y-1.5">
-            <span className="font-semibold text-amber-300">Paso 3: Ejecutar con Python 3</span>
-            <div className="flex items-center space-x-2 mt-1">
-              <code className="px-3 py-1.5 bg-slate-900 text-emerald-400 font-mono text-xs rounded border border-slate-700">
-                python juego_carreras.py
-              </code>
-              <span className="text-slate-500">(o <code className="text-slate-400">python3 juego_carreras.py</code> en macOS/Linux)</span>
+            <span className="font-semibold text-amber-300">Paso 3: Ejecutar con Python</span>
+            <div className="p-2.5 bg-slate-900 rounded font-mono text-emerald-400 text-xs select-all">
+              python juego_carreras.py
             </div>
-          </div>
-
-          <div className="flex items-start space-x-2 p-3 bg-blue-950/30 border border-blue-800/40 rounded-lg text-slate-300">
-            <Compass className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-            <p>
-              ¡Y listo! Se abrirá instantáneamente la ventana nativa de Tkinter con la carretera vertical, el medidor de nitro, cañón y autos enemigos.
+            <p className="text-slate-400 text-[11px]">
+              Se abrirá al instante una ventana nativa de Tkinter con la carretera en movimiento continuo a 60 FPS, monedas, garaje interactivo con la tecla [G], sistema de nitro y cañón.
             </p>
           </div>
         </div>

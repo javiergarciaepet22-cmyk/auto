@@ -1,6 +1,6 @@
 {
   "name": "Python Tkinter Endless Runner",
-  "description": "Juego arcade de conducción vertical sin límites desarrollado en Python con Tkinter.",
+  "description": "Juego arcade de conducción vertical en Python con Tkinter, compras en garaje, monedas y personalización.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
